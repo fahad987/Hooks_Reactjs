@@ -20,24 +20,40 @@
 
 // export default App;
 
-import React, {useState} from 'react'
-import './App.css'
+// import React, {useState} from 'react'
+// import './App.css'
+
+// const App = () => {
+    
+//     let newTime = new Date().toLocaleTimeString();
+//     const [cTime, setTime] = useState(newTime)
+
+// const UpdateTime = () => {
+// newTime = new Date().toLocaleTimeString();
+// setTime(newTime)
+// }
+
+//     return(
+// <div>
+// <h1> {cTime}</h1>
+// <button onClick={UpdateTime}> get time</button>
+// </div>
+//     )
+// }
+// export default App;
+
+import React from 'react';
+import './App.css';
 
 const App = () => {
-    
-    let newTime = new Date().toLocaleTimeString();
-    const [cTime, setTime] = useState(newTime)
-
-const UpdateTime = () => {
-newTime = new Date().toLocaleTimeString();
-setTime(newTime)
+ 
+ let Time = new Date().toLocaleTimeString();
+ 
+  return(
+    <div>
+      <h1>  {Time}</h1>
+    </div>
+  )
 }
 
-    return(
-<div>
-<h1> {cTime}</h1>
-<button onClick={UpdateTime}> get time</button>
-</div>
-    )
-}
 export default App;
