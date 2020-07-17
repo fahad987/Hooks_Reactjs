@@ -2,31 +2,28 @@ import React, {useState} from 'react';
 import './App.css'
 
 const App = () => {
-  const purple = '#8e44ad'
-  const [bg, setBg] = useState(purple);
 
-  const [name, setName] = useState("click me");
-  const bgChange = () => {
-    // console.log('clicked')
+  const [name,setName] = useState("");
+const [fullName,setFullName]= useState();
 
-    let newBg = "#34495e";
-    setBg(newBg);
-setName("ouch!! 😄 ")
+  const inputEvent = (event) => {
+console.log(event.target.value);
+setName(event.target.value)
   }
 
-const bgBack = () => {
-  setBg(purple);
-  setName("Ayyo!! 😠 ")
-}
+
+  const onsubmit = () => {
+setFullName(name);
+  }
 
   return(
-<div style= { { backgroundColor : bg } }>
-
-<button onMouseEnter={bgChange} onMouseLeave={bgBack}> {name} </button>
+<div>
+ <h1>Hello {fullName}</h1>
+ <input type="text" placeholder="Enter YOur Name" 
+ onChange={inputEvent}
+ value={name} />
+ <button onClick={onsubmit}> Click Me </button>
 </div>
   )
 }
-
 export default App;
-
-
